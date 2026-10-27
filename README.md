@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Nmap-Metasploit-8A2BE2?style=for-the-badge&logo=metasploit&logoColor=white&labelColor=1a0b2e" />
 </p>
 
-<p align="center"> <sub>Este README está en Español. <a href="./README.md">English version available here</a>.</sub> </p>
+<p align="center"> <sub>This README is in English. <a href="./README.es.md">Versión en español disponible aquí</a>.</sub> </p>
 
 ## About
 
