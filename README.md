@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./Utils/banner.en.png" alt="Foxploit Writeups" width="100%">
+  <img src="./Utils/banner.es.png" alt="Foxploit Writeups" width="100%">
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Arch-Linux-8A2BE2?style=for-the-badge&logo=archlinux&logoColor=white&labelColor=1a0b2e" />
@@ -11,35 +11,37 @@
   <img src="https://img.shields.io/badge/Python-Bash-8A2BE2?style=for-the-badge&logo=python&logoColor=white&labelColor=1a0b2e" />
   <img src="https://img.shields.io/badge/Nmap-Metasploit-8A2BE2?style=for-the-badge&logo=metasploit&logoColor=white&labelColor=1a0b2e" />
 </p>
-<p align="center"> <sub>This README is in English. <a href="./README.es.md">Versión en español disponible aquí</a>.</sub> </p>
-## Descripción
 
-Repositorio personal donde documento mi práctica en seguridad web y pentesting. Cada writeup recoge la o las vulnerabilidades, el proceso de explotación y la mitigación recomendada.
+<p align="center"> <sub>Este README está en Español. <a href="./README.md">English version available here</a>.</sub> </p>
 
-## Alcance
+## About
 
-- **PortSwigger Web Security Academy**: soluciones de labs con payloads utilizados y el razonamiento detrás de cada uno.
-- **CTFs**: retos y competiciones, centrados en la metodología y no solo la flag.
-- **HackTheBox**: informes de máquinas retiradas, redactados con formato de informe de pentest profesional.
-- **TryHackMe**: rooms y WalkThroughs.
+Personal repository documenting my practice in web security and penetration testing. Each writeup covers the vulnerability, the explotaitation process and the recommended mitigation.
 
-## Contenido
+## Scope
 
-| Sección                      | Descripción                    | Estado      |
-| ---------------------------- | ------------------------------ | ----------- |
-| [PortSwigger](./PortSwigger) | Labs de Web Security Academy   | En progreso |
-| [CTFs](./CTFs)               | Retos y competiciones          | En progreso |
-| [HackTheBox](./HackTheBox)   | Informes de máquinas retiradas | Planificado |
-| [TryHackMe](./TryHackMe)     | Rooms y walkthroughs           | Planificado |
+- **PortSwigger Web Security Academy**: lab solutions with the payloads used and the reasoning behind them.
+- **CTFs**: challenges and competitions, focused on methodology rather tan just the flag.
+- **HackTheBox**: reports on retired machines, written in a professional pentest report format.
+- **TryHackMe**: rooms and WalkThroughs.
 
-## Estructura de los writeups
+## Content
 
-1. **Objetivos**: qué se busca conseguir.
-2. **Reconocimiento**: qué se observa y como.
-3. **Explotación**: pasos y payloads.
-4. **Mitigación**: por qué funciona y cómo prevenirlo.
+| Section                      | Description                 | Status      |
+| ---------------------------- | --------------------------- | ----------- |
+| [PortSwigger](./PortSwigger) | Web Security Academy labs   | In Progress |
+| [CTFs](./CTFs)               | Challenges and competitions | In Progress |
+| [HackTheBox](./HackTheBox)   | Retired machine reports     | Planned     |
+| [TryHackMe](./TryHackMe)     | Rooms and walkthroughs      | Planned     |
 
-## Aviso legal
+## Writeup structure
 
-Este contenido tiene fines exclusivamente educativos. Todas las técnicas se han realizado en entornos autorizados (labs, CTFs y máquinas retiradas). No las utilices contra sistemas sin permiso expreso.
+1. **Objective**: what needs to be achieved.
+2. **Reconnaissance**: what is observed and how.
+3. **Exploitation**: steps and payloads.
+4. **Mitigation**: why it works and how to prevent it.
+
+## Disclaimer 
+
+This content is for educational purposes only. All techniques were performed in authorized environments (labs, CTFs and retired machines). Do not use them against systems without explicit permission.
 
