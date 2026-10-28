@@ -16,7 +16,7 @@
 
 ## About
 
-Personal repository documenting my practice in web security and penetration testing. Each writeup covers the vulnerability, the explotaitation process and the recommended mitigation.
+Personal repository documenting my practice in web security and penetration testing. Each writeup covers the vulnerability, the exploitation process and the recommended mitigation.
 
 ## Scope
 
