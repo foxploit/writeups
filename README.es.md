@@ -29,7 +29,7 @@ Repositorio personal donde documento mi práctica en seguridad web y pentesting.
 
 | Sección                      | Descripción                    | Estado      |
 | ---------------------------- | ------------------------------ | ----------- |
-| [PortSwigger](./PortSwigger) | Labs de Web Security Academy   | En progreso |
+| [PortSwigger](./PortSwigger/PortSwigger.es.md) | Labs de Web Security Academy   | En progreso |
 | [CTFs](./CTFs)               | Retos y competiciones          | En progreso |
 | [HackTheBox](./HackTheBox)   | Informes de máquinas retiradas | Planificado |
 | [TryHackMe](./TryHackMe)     | Rooms y walkthroughs           | Planificado |
