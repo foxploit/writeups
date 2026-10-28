@@ -29,7 +29,7 @@ Personal repository documenting my practice in web security and penetration test
 
 | Section                      | Description                 | Status      |
 | ---------------------------- | --------------------------- | ----------- |
-| [PortSwigger](./PortSwigger) | Web Security Academy labs   | In Progress |
+| [PortSwigger](./PortSwigger/PortSwigger.md) | Web Security Academy labs   | In Progress |
 | [CTFs](./CTFs)               | Challenges and competitions | In Progress |
 | [HackTheBox](./HackTheBox)   | Retired machine reports     | Planned     |
 | [TryHackMe](./TryHackMe)     | Rooms and walkthroughs      | Planned     |
@@ -41,7 +41,7 @@ Personal repository documenting my practice in web security and penetration test
 3. **Exploitation**: steps and payloads.
 4. **Mitigation**: why it works and how to prevent it.
 
-## Disclaimer 
+## Disclaimer
 
 This content is for educational purposes only. All techniques were performed in authorized environments (labs, CTFs and retired machines). Do not use them against systems without explicit permission.
 
