@@ -1,57 +1,38 @@
-# SQL Injection in WHERE clause allowing retrieval of hidden data
+# SQL Injection in WHERE clause: retrieving hidden data
 
-|                |                                                                                                                                                    |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Author**     | foxploit                                                                                                                                           |
-| **Platform**   | PortSwigger Web Security Academy                                                                                                                   |
-| **Category**   | SQL Injection                                                                                                                                      |
-| **Difficulty** | ⭐☆☆☆☆ (Apprentice)                                                                                                                                 |
-| **Status**     | ✅ Solved                                                                                                                                           |
-| **Lab URL**    | [portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data) |
+| | |
+|---|---|
+| **Platform** | PortSwigger Web Security Academy |
+| **Category** | SQL Injection |
+| **Difficulty** | Apprentice |
+| **Status** | Solved |
 
 ## Objective
 
-Bypass the product filter to retrieve hidden/unreleased products via SQL injection in the `category` parameter.
+Bypass a product category filter that hides unreleased items, using SQL injection in a query parameter.
 
 ## Reconnaissance
 
-- Identified controllable parameters: `productId` and `category`.
-- Tested `category=1 OR 1=1 --` → reflected without sanitization.
-- Ruled out XSS: `<script>alert("1")</script>` printed as plain text, not executed — confirmed the vector was server-side SQL, not client-side.
+- Identified the `category` parameter as the likely injection point.
+- Tested reflected input to see whether it reached the database. A `<script>` payload was printed as plain text, so the vector was server-side and not XSS.
+- Noted that the parameter value is wrapped in a string literal, which determines how the payload has to be closed.
 
-## Exploitation
+## Reasoning
 
-1. Crafted a payload accounting for the string context of the `category` parameter:
-
-```
-Gifts' OR 1=1 --
-```
-
-2. Sent the request:
-
-```
-GET /filter?category=Gifts'+OR+1=1+--+
-```
-
-3. Response included hidden/unreleased products — filter bypassed.
-
-| Before                                              | After                                              |
-| --------------------------------------------------- | -------------------------------------------------- |
-| <img src="./screenshots/01-before.png" width="400"> | <img src="./screenshots/01-after.png" width="400"> |
-
-**Payload applied:** `Gifts' OR 1=1 --`
+- The query filters rows with a `WHERE` clause that checks the category and hides unreleased items.
+- Closing the string literal with a quote lets me append my own condition to the `WHERE` clause.
+- A condition that is always true makes the filter stop excluding rows, and a comment sequence drops the rest of the original query.
 
 ## Impact
 
-An attacker can bypass category/visibility restrictions to view unreleased products. In a production environment, the same injection point could be extended to extract data from other tables via `UNION SELECT`.
+An attacker could bypass visibility restrictions. In a real application, the same injection point could be extended with `UNION SELECT` to read data from other tables.
 
 ## Mitigation
 
-- Use parameterized queries / prepared statements instead of concatenating user input into SQL.
-- Apply server-side input validation as a defense-in-depth measure.
+- Use parameterized queries or prepared statements instead of concatenating input into SQL.
+- Validate input on the server as defense in depth.
 
-## Lesson Learned
+## Lesson learned
 
-- A single quote (`'`) terminates a SQL string literal — this is the injection point.
-- `OR 1=1` is always true → bypasses the preceding `WHERE` condition.
-- `--` comments out the rest of the original query, neutralizing anything after the payload.
+- Always check how user input is quoted in the query before choosing a payload.
+- Fixing the injection point matters more than memorizing any specific payload.
