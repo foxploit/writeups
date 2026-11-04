@@ -1,57 +1,38 @@
-# Inyección SQL en cláusula WHERE que permite recuperar datos ocultos
+# Inyección SQL en cláusula WHERE para recuperar datos ocultos
 
 | | |
 |---|---|
-|**Autor**|foxploit|
-|**Plataforma**|PortSwigger Web Security Academy|
-|**Categoría**|SQL Injection|
-|**Dificultad**|⭐☆☆☆☆ (Apprentice)|
-|**Estado**|✅ Resuelto|
-|**URL del laboratorio**|[portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data)|
+| **Plataforma** | PortSwigger Web Security Academy |
+| **Categoría** | SQL Injection |
+| **Dificultad** | Apprentice |
+| **Estado** | Resuelto |
 
 ## Objetivo
 
-Saltarse el filtro de productos para recuperar productos ocultos/no publicados mediante inyección SQL en el parámetro `category`.
+Saltarse un filtro de categorías que oculta productos no publicados, mediante inyección SQL en un parámetro de la URL.
 
 ## Reconocimiento
 
-- Parámetros controlables identificados: `productId` y `category`.
-- Se probó `category=1 OR 1=1 --` → se reflejaba sin sanitizar.
-- Se descartó XSS: `<script>alert("1")</script>` se imprimía como texto plano, sin ejecutarse — confirmando que el vector era SQL del lado del servidor, no del cliente.
+- Parámetro candidato identificado: `category`.
+- Se probó la entrada reflejada para comprobar si llegaba a la base de datos. Un payload de `<script>` se imprimió como texto plano, así que el vector era SQL del lado del servidor y no XSS.
+- El valor del parámetro va entre comillas, lo que determina cómo hay que cerrar el payload.
 
-## Explotación
+## Razonamiento
 
-1. Se construyó un payload teniendo en cuenta el contexto de cadena del parámetro `category`:
-
-```
-Gifts' OR 1=1 --
-```
-
-2. Se envió la petición:
-
-```
-GET /filter?category=Gifts'+OR+1=1+--+
-```
-
-3. La respuesta incluyó productos ocultos/no publicados — filtro saltado.
-
-|Antes|Después|
-|---|---|
-|<img src="./screenshots/01-before.png" width="400">|<img src="./screenshots/01-after.png" width="400">|
-
-**Payload aplicado:** `Gifts' OR 1=1 --`
+- La consulta filtra filas con una cláusula `WHERE` que comprueba la categoría y oculta los productos no publicados.
+- Cerrar el literal de cadena con una comilla permite añadir una condición propia a la cláusula `WHERE`.
+- Una condición siempre verdadera hace que el filtro deje de excluir filas, y una secuencia de comentario descarta el resto de la consulta original.
 
 ## Impacto
 
-Un atacante puede saltarse las restricciones de categoría/visibilidad para ver productos no publicados. En un entorno de producción, el mismo punto de inyección podría extenderse para extraer datos de otras tablas mediante `UNION SELECT`.
+Un atacante podría saltarse restricciones de visibilidad. En una aplicación real, el mismo punto de inyección podría ampliarse con `UNION SELECT` para leer datos de otras tablas.
 
 ## Mitigación
 
-- Usar consultas parametrizadas / prepared statements en lugar de concatenar la entrada del usuario en SQL.
-- Aplicar validación de entrada del lado del servidor como medida de defensa en profundidad.
+- Usar consultas parametrizadas o prepared statements en lugar de concatenar la entrada del usuario en SQL.
+- Validar la entrada en el servidor como defensa en profundidad.
 
 ## Lección aprendida
 
-- Una comilla simple (`'`) cierra un literal de cadena SQL — ese es el punto de inyección.
-- `OR 1=1` siempre es verdadero → salta la condición `WHERE` precedente.
-- `--` comenta el resto de la query original, neutralizando todo lo que va después del payload.
+- Antes de elegir un payload, revisa cómo se entrecomilla la entrada del usuario en la consulta.
+- Corregir el punto de inyección importa más que memorizar un payload concreto.
