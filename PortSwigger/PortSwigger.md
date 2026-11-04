@@ -5,16 +5,17 @@
 
 [← Back to writeups](../README.md)
 
-Lab solutions from the PortSwigger Web Security Academy. Each entry includes the payloads used and the reasoning behind the exploitation, no just the solution.
+Reasoning and technique notes from the PortSwigger Web Security Academy labs. Each entry covers how the vulnerability was identified and why it works, without full lab solutions.
 
 ## Progress
 
 | Topic         | Lab                                          | Status |
 | ------------- | -------------------------------------------- | ------ |
 | SQL Injection | [Hidden data](./SQLi/SQLi-01-Hidden-Data.md) | ✅ Done |
-## Structure 
 
-Each lab follows the same format as the rest of the repo: **Objective → Reconnaissance → Exploitation → Mitigation**. See the [main README](../README.md) for the full breakdown.
+## Structure
+
+Each lab follows the same format as the rest of the repo: **Objective → Reconnaissance → Reasoning → Mitigation**. See the [main README](../README.md) for the full breakdown.
 
 ## Notes
 

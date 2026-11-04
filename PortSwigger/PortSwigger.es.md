@@ -5,7 +5,7 @@
 
 [← Volver a writeups](../README.es.md)
 
-Soluciones de laboratorios de PortSwigger Web Security Academy. Cada entrada incluye los payloads usados y el razonamiento detrás de la explotación, no solo la solución.
+Notas de razonamiento y técnicas de los laboratorios de PortSwigger Web Security Academy. Cada entrada recoge cómo se identificó la vulnerabilidad y por qué funciona, sin incluir soluciones completas.
 
 ## Progreso
 
@@ -15,8 +15,8 @@ Soluciones de laboratorios de PortSwigger Web Security Academy. Cada entrada inc
 
 ## Estructura
 
-Cada laboratorio sigue el mismo formato que el resto del repo: **Objetivo → Reconocimiento → Explotación → Mitigación**. Consulta el [README principal](../README.es.md) para ver el desglose completo.
+Cada laboratorio sigue el mismo formato que el resto del repo: **Objetivo → Reconocimiento → Razonamiento → Mitigación**. Consulta el [README principal](../README.es.md) para ver el desglose completo.
 
 ## Notas
 
-Los laboratorios se resuelven contra el entorno sandbox propio de PortSwigger. No hay objetivos externos involucrados.
+Los laboratorios se resuelven en el entorno sandbox de PortSwigger. No hay objetivos externos involucrados.
