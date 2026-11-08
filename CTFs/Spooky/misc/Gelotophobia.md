@@ -1,5 +1,3 @@
-![[03.png]]
-
 | **CTF**        | SpookyCTF |
 | -------------- | --------- |
 | **Category**   | Misc      |
@@ -34,7 +32,7 @@ The joke shown was about pizza, so the path probably encodes that word.
 
 Decoding the base64 with `Cetacean Cypher` returns `pizza` so the path is just the topic of the joke, encoded as `Cetacean Cypher -> base64`
 
-![[static/02.png]]
+![[./static/02.png]]
 
 ## Encode the `flag` the same way
 
@@ -44,7 +42,7 @@ In cyberchef with `flag` as input, use `Cetacean Cypher Encode` and the `To Base
 RUVFRUVFRUVFZWVFRWVlRUVFRUVFRUVFRWVlRWVlRUVFRUVFRUVFRUVlZUVFRUVlRUVFRUVFRUVFZWVFRWVlZQ==
 ```
 
-![[static/03.png]]
+![[./static/03.png]]
 
 The same can be done with python (`solve.py`):
 
@@ -61,7 +59,7 @@ print(encode("flag"))
 
 You can either request it via web or via command:
 
-![[static/04.png]]
+![[./static/04.png]]
 
 ## Flag
 
