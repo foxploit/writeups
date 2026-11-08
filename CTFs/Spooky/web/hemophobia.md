@@ -63,7 +63,7 @@ The note gives the song title and a Spotify playlist, and asks for the band.
 
 Searching the song `Roots Bloody Roots` on Spotify shows that it is by **Sepultura**.
 
-![Spotify](hemophobia-03.png)
+![Spotify](static/hemophobia-03.png)
 
 Since the flag format is `spooky{band}`, the flag is the band name in lowercase.
 
