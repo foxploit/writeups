@@ -14,7 +14,7 @@ _this challenge contains ... bright, flashing, strobe lights. Those who are seiz
 
 The challenge is a webpage with a "Generate Joke" button. Each click loads a joke about some topic, and the page is full o visual noise.
 
-![[static/01.png]]
+![Overview](static/01.png)
 
 ## Solution
 
@@ -32,7 +32,7 @@ The joke shown was about pizza, so the path probably encodes that word.
 
 Decoding the base64 with `Cetacean Cypher` returns `pizza` so the path is just the topic of the joke, encoded as `Cetacean Cypher -> base64`
 
-![[./static/02.png]]
+![Deocde the path](static/02.png)
 
 ## Encode the `flag` the same way
 
@@ -42,7 +42,7 @@ In cyberchef with `flag` as input, use `Cetacean Cypher Encode` and the `To Base
 RUVFRUVFRUVFZWVFRWVlRUVFRUVFRUVFRWVlRWVlRUVFRUVFRUVFRUVlZUVFRUVlRUVFRUVFRUVFZWVFRWVlZQ==
 ```
 
-![[./static/03.png]]
+![Encode the flag](static/03.png)
 
 The same can be done with python (`solve.py`):
 
@@ -59,7 +59,7 @@ print(encode("flag"))
 
 You can either request it via web or via command:
 
-![[./static/04.png]]
+![Request via web](static/04.png)
 
 ## Flag
 
