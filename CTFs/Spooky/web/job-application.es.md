@@ -8,7 +8,7 @@
 
 ## Enunciado
 
-¡Bienvenido al futuro de las solicitudes de empleo! En AI Slop nos enorgullecemos de agilizar el proceso de solicitud y de ayudar a los candidatos a encontrar su puesto ideal en nuestra empresa con nuestra plataforma de contratación impulsada por IA. Envía tu solicitud y deja que nuestro sistema de selección de AI Slop evalúe tu vida. ¡En AI Slop esperamos trabajar contigo en el futuro!
+Welcome to the future of job applications! Here at AI Slop, we pride ourselves on streamlining the application process and helping candidates find their perfect role at our company using our AI-powered hiring platform. Submit your application and have our AI Slop screening system evaluate your life. We at AI Slop look forward to working with you in the future!
 
 ## Resumen
 

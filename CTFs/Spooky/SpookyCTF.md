@@ -10,7 +10,7 @@ By [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.linkedin.com
 | --------- | --------------------------------- | ------ | -------------------------------------------------------- |
 | Web       | J*b Application                   | 50     | [writeup](web/job-application.md)                        |
 | Web       | Hemophobia                        | 50     | [writeup](hemophobia.md)                                 |
-| Web       | Scopophobia                       | 50     | [writeup](job-application.es.md)                                |
+| Web       | Scopophobia                       | 50     | [writeup](scopophobia.md)                                |
 | Crypto    | Heads will Roll                   | 50     | [writeup](crypto/heads-will-roll.md)                     |
 | Crypto    | Numerophobia                      | 50     | [writeup](crypto/numerophobia.md)                        |
 | Crypto    | Cyberphobia: SpOoKy KeYsTrEaMs    | 50     | [writeup](crypto/cyberphobia-spooky-keystreams.md)       |
@@ -24,7 +24,7 @@ By [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.linkedin.com
 | Reversing | Trypophobia                       | 75     | [writeup](reversing/trypophobia.md)                      |
 | Reversing | Elves can be Spooky Too           | 377    | [writeup](reversing/elves-can-be-spooky-too.md)          |
 | Forensics | The Haunted Portrait              | 50     | [writeup](forensics/the-haunted-portrait.md)             |
-| Misc      | Gelotophobia                      | 50     | [writeup](misc/Gelotophobia.md)                          |
+| Misc      | Gelotophobia                      | 50     | [writeup](misc/gelotophobia.md)                          |
 
 ## Structure
 
