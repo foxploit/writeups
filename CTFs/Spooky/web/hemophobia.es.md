@@ -8,7 +8,7 @@
 
 ## Enunciado
 
-Estás atrapado en esta pesadilla interminable, con música y sangre que se filtra por el techo y se arrastra por las paredes. Cuando la sangre llega al suelo, tus pies quedan enraizados y la sangre te consume, y lo revives todo otra vez. Para escapar debes encontrar la llave escondida dentro de estas paredes, y solo entonces podrás salir de esta pesadilla. Buena suerte...
+You are trapped in this endless nightmare with music and blood seeping in through the ceiling, crawling down the walls. Once the blood reaches the bottom, your feet become rooted to the ground as the blood consumes you, and you relive it all over again. To escape you must find the key hidden within these walls, and only then can you escape this nightmare. Goodluck...
 
 ## Resumen
 
