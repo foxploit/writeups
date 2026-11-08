@@ -1,3 +1,5 @@
+# Gelotophobia
+
 | **CTF**        | SpookyCTF |
 | -------------- | --------- |
 | **Category**   | Misc      |

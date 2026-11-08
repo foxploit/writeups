@@ -1,6 +1,6 @@
 # SpookyCTF 2026 - Writeups
 
-Writeups for the challenges I solved during SpookyCTF 2026 (17 challenges, 1449 points). Each one includes the statement, the steps to solve it, the flag and what I learned.
+Writeups for the challenges I solved during SpookyCTF 2026 (17 challenges, 1651 points). Each one includes the statement, the steps to solve it, the flag and what I learned.
 
 By [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.linkedin.com/in/adrian-rodriguez-ortiz/)
 
