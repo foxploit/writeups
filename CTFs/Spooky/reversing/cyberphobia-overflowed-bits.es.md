@@ -2,9 +2,9 @@
 
 | **CTF**        | SpookyCTF |
 | -------------- | --------- |
-| **Category**   | Crypto    |
-| **Points**     | 50        |
-| **Difficulty** | Easy      |
+| **Categoría**  | Reversing |
+| **Puntos**     | 50        |
+| **Dificultad** | Easy      |
 
 ## Enunciado
 
