@@ -28,7 +28,46 @@ By [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.linkedin.com
 
 ## Structure
 
->TODO Rellenar
+Each challenge category has its own folder, and every challenge inside it is stored as a pair of files — one in English (`.md`) and its translation (`.es.md`) — plus a `static/` folder with the screenshots that go along with the writeup.
+
+```
+Spooky
+├── crypto
+│   ├── cyberphobia-spooky-keystreams.md / .es.md
+│   ├── diagraphephobia.md / .es.md
+│   ├── heads-will-roll.md / .es.md
+│   ├── numerophobia.md / .es.md
+│   ├── someone-watching-me.md / .es.md
+│   └── static/
+├── forensics
+│   ├── the-haunted-portrait.md / .es.md
+│   └── static/
+├── misc
+│   ├── gelotophobia.md / .es.md
+│   └── static/
+├── reversing
+│   ├── cyberphobia-formatting-nightmare.md / .es.md
+│   ├── cyberphobia-overflowed-bits.md / .es.md
+│   ├── elves-can-be-spooky-too.md / .es.md
+│   ├── frankensteins-password-generator.md / .es.md
+│   ├── too-much-love-is-scary.md / .es.md
+│   ├── trypophobia.md / .es.md
+│   └── static/
+├── web
+│   ├── hemophobia.md / .es.md
+│   ├── job-application.md / .es.md
+│   ├── scopophobia.md / .es.md
+│   └── static/
+├── SpookyCTF.md        ← this index
+└── SpookyCTF.es.md
+```
+
+**Conventions:**
+
+- One file per challenge, per language: `<slug>.md` (English) and `<slug>.es.md` (Spanish).
+- Screenshots live under `static/`, named `<slug>-NN.png` when a challenge has more than one.
+- `<slug>` is the challenge name, lowercased with hyphens (`job-application`, `heads-will-roll`...).
+
 ## Tools
 
 Burp Suite, CyberChef, GDB, ltrace, Python, curl
