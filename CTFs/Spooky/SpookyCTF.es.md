@@ -10,7 +10,7 @@ Realizado por [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.l
 | --------- | --------------------------------- | ------ | -------------------------------------------------------- |
 | Web       | J*b Application                   | 50     | [writeup](web/job-application.es.md)                        |
 | Web       | Hemophobia                        | 50     | [writeup](web/hemophobia.es.md)                              |
-| Web       | Scopophobia                       | 50     | [writeup](web/job-application.es.md)                         |
+| Web       | Scopophobia                       | 50     | [writeup](web/scopophobia.es.md)                         |
 | Crypto    | Heads will Roll                   | 50     | [writeup](crypto/heads-will-roll.es.md)                     |
 | Crypto    | Numerophobia                      | 50     | [writeup](crypto/numerophobia.es.md)                        |
 | Crypto    | Cyberphobia: SpOoKy KeYsTrEaMs    | 50     | [writeup](crypto/cyberphobia-spooky-keystreams.es.md)       |
