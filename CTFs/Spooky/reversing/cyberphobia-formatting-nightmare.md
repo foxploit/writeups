@@ -4,7 +4,7 @@
 | -------------- | --------- |
 | **Category**   | Reversing |
 | **Points**     | 75        |
-| **Difficulty** | Easy      |
+| **Difficulty** | Medium    |
 
 ## Statement
 
