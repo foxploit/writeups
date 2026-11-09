@@ -3,7 +3,7 @@
 | **CTF**        | SpookyCTF |
 | -------------- | --------- |
 | **Category**   | Reversing |
-| **Points**     | 50        |
+| **Points**     | 75        |
 | **Difficulty** | Easy      |
 
 ## Statement
