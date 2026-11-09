@@ -8,7 +8,7 @@
 
 ## Enunciado
 
-Mientras perseguía a Ichabod Crane por Sleepy Hollow, el Jinete sin Cabeza se acercó todo lo que pudo y entonces ¡lanzó su cabeza! Mientras rodaba, rodaba, rodaba, rodaba por el aire, su cabeza de calabaza gritó… ¿el qué? Su puntería perfecta tiró a Ichabod al suelo cerca de los raíles (*rails*), pero ¿qué dijo?
+While chasing Ichabod Crane through Sleepy Hollow, the Headless Horseman got as close as he could, then threw his head! While rolling, rolling, rolling, rolling, through the air, his pumpkin head shouted…what? His perfect aim knocked Ichabod to the ground near the rails, but what did he say?
 
 ```
 Etu_taip5_w5n_hpmnw_hlgsdso{lyh0_d}jyi_piihef_ne_oy3p0lh4oskt_i:k3l3
