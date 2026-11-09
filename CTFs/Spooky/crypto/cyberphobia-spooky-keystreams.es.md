@@ -1,10 +1,10 @@
 # Spooky Keystreams
 
-|**CTF**|SpookyCTF|
-|---|---|
-|**Category**|Crypto|
-|**Points**|50|
-|**Difficulty**|Easy|
+| **CTF**        | SpookyCTF |
+| -------------- | --------- |
+| **Category**   | Crypto    |
+| **Points**     | 50        |
+| **Difficulty** | Easy      |
 
 ## Enunciado
 
