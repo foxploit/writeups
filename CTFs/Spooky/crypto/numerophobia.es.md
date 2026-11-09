@@ -8,7 +8,7 @@
 
 ## Enunciado
 
-Fui a explorar la casa del viejo loco de la esquina de la calle. Desapareció el fin de semana pasado y nadie lo ha vuelto a ver. Se rumorea que lo vieron por última vez salir a medianoche gritando números aleatorios en lenguas que nunca se habían hablado. Decidí ir a investigar y, como era de esperar, la puerta principal estaba abierta. De camino a las escaleras casi tropiezo con una pila de libros, uno era sobre la dislexia, creo. Por alguna razón faltaba un escalón de cada dos, y en la pared estaban marcados con un 13. Por fin llegué arriba y me dirigí hacia la luz del final del pasillo. Pegado a la pared había un papel…
+I went exploring the house of the crazy old man on the corner of the street. He disappeared last weekend and nobody has seen him since. Rumor has it that he was last seen walking out at midnight screaming random numbers in tongues never spoken before. I decided to go and investigate, unsurprisingly the front door was left unlocked. On the way to the stairs I almost tripped over a stack of books, one was about dyslexia I think. For some reason every other step was missing and marked with a 13 on the wall. I finally reached the top and headed towards the light at the end of the hallway. Taped on the wall was a piece of paper…
 
 ```
 23 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 50 65 10 138 50 65 95 123 51 64 98 108 53 134 52 132 108 65 95 66 52 117 95 127 51 132 53 123 52 108 51 117 116 136 121 120 111 124 112 128 10 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52 63 52
