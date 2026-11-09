@@ -24,7 +24,7 @@ Realizado por [foxploit](https://github.com/foxploit) - [LinkedIn](https://www.l
 | Reversing | Trypophobia                       | 75     | [writeup](reversing/trypophobia.es.md)                      |
 | Reversing | Elves can be Spooky Too           | 377    | [writeup](reversing/elves-can-be-spooky-too.es.md)          |
 | Forensics | The Haunted Portrait              | 50     | [writeup](forensics/the-haunted-portrait.es.md)             |
-| Misc      | Gelotophobia                      | 50     | [writeup](gelotophobia.es.md)                          |
+| Misc      | Gelotophobia                      | 50     | [writeup](misc/gelotophobia.es.md)                          |
 
 ## Estructura
 
