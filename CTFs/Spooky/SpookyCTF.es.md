@@ -58,8 +58,8 @@ Spooky
 │   ├── job-application.md / .es.md
 │   ├── scopophobia.md / .es.md
 │   └── static/
-├── SpookyCTF.md        ← este índice
-└── SpookyCTF.es.md
+├── SpookyCTF.md        
+└── SpookyCTF.es.md    ← este índice
 ```
 
 **Convenciones:**
