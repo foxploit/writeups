@@ -1,4 +1,4 @@
-![[head-dump-02.png]]# head-dump
+# head-dump
 
 ## Enunciado
 
@@ -10,17 +10,17 @@ The application is a simple blog website where you can read articles about vario
 
 Al entrar en la web, veo una web básica de noticias sobre picoCTF:
 
-![[head-dump-01.png]]
+![Recon](static/head-dump-01.png)
 
 ## Encontrar la documentación de la API
 
 La documentación de la API está expuesta en la siguiente publicación de la web:
 
-![[head-dump-02.png|678]]
+![API](static/head-dump-02.png)
 
 ## Revisar la documentación de la API
 
-El nombre del CTF es `head-dump` y hay una ruta dentro de la documentación de la API, lo cual es una pista bastante grande y contiene el siguiente comando:
+El nombre del CTF es `head-dump` y hay una ruta dentro de la documentación de la API, lo cual es una pista bastante grante y contiene en siguiente comando:
 
 ```bash
 curl -X 'GET' \
@@ -70,7 +70,7 @@ Se mueve a `flag.txt` con `>` para poder analizarlo de forma más cómoda y senc
 
 En el archivo `flag.txt` se ve de forma clara la flag:
 
-![[head-dump-03.png]]
+![Flag](static/head-dump-03.png)
 
 ## Explicación
 

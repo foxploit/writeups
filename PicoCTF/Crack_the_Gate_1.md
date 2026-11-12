@@ -8,13 +8,13 @@ We’re in the middle of an investigation. One of our persons of interest, ctf p
 
 When i open the website, I see a `login` panel:
 
-![[Crack_the_gate_1-01.png]]
+![Login](static/Crack_the_gate_1-01.png)
 
 ## Review the source code
 
 In the source code a peculiar HTML comment, that leads me to think its encoded in a certain way.
 
-![[Crack_the_gate_1-02.png]]
+![Source Code](static/Crack_the_gate_1-02.png)
 
 ## Decode HTML comment
 
@@ -28,7 +28,7 @@ NOTE: Jack - temporary bypass: use header "X-Dev-Access: yes"
 
 I intercept the login request with Burp Suite and add the header `X-Dev-Access: yes`. The `password` field has the value `password`, which is arbitrary, since the header bypasses the credential check. The response contains the flag.
 
-![[Crack_the_gate_1-03.png]]
+![Burp Suite](static/Crack_the_gate_1-03.png)
 
 ## Explanation
 

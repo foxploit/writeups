@@ -8,12 +8,12 @@ We’re in the middle of an investigation. One of our persons of interest, ctf p
 
 Al entrar en la web, veo un panel de `login`:
 
-![[Crack_the_gate_1-01.png]]
+![Login](static/Crack_the_gate_1-01.png)
 ## Ver el código fuente
 
 En el código fuente observo un comentario html un tanto peculiar, que me lleva a pensar que puede estar cifrado de alguna forma.
 
-![[Crack_the_gate_1-02.png]]
+![Source Code](static/Crack_the_gate_1-02.png)
 
 ## Descrifrar comentario HTML
 
@@ -27,7 +27,7 @@ NOTE: Jack - temporary bypass: use header "X-Dev-Access: yes"
 
 Intercepto la petición de login con Burp Suite y añado la cabecera `X-Dev-Access: yes`. El campo `password` tiene valor `test`, un valor cualquiera, ya que la cabecera salta la comprobación de credenciales. La respuesta contiene la flag.
 
-![[Crack_the_gate_1-03.png]]
+![Burp Suite](static/Crack_the_gate_1-03.png)
 
 ## Explicación
 
