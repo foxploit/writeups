@@ -26,12 +26,13 @@ Personal repository documenting my practice in web security and penetration test
 
 ## Content
 
-| Section                                        | Description                 | Status      |
-| ---------------------------------------------- | --------------------------- | ----------- |
-| [PortSwigger](./PortSwigger/PortSwigger.md)    | Web Security Academy labs   | In Progress |
-| [CTFs](./CTFs)                                 | Challenges and competitions | In Progress |
-| [HackTheBox](./HackTheBox)                     | Retired machine reports     | Planned     |
-| [TryHackMe](./TryHackMe)                       | Rooms and walkthroughs      | Planned     |
+| Section                                     | Description                                 | Status      |
+| ------------------------------------------- | ------------------------------------------- | ----------- |
+| [PortSwigger](./PortSwigger/PortSwigger.md) | Web Security Academy labs                   | In Progress |
+| [CTFs](./CTFs)                              | Challenges and competitions                 | In Progress |
+| [PicoCTF](./PicoCTF)                        | PicoCTF (CyLab Security Academy) challenges | In Progress |
+| [HackTheBox](./HackTheBox)                  | Retired machine reports                     | Planned     |
+| [TryHackMe](./TryHackMe)                    | Rooms and walkthroughs                      | Planned     |
 
 ## Writeup structure
 
